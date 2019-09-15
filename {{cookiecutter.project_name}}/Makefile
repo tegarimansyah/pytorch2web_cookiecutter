@@ -3,7 +3,7 @@ install:
 	@( \
 		. .venv/bin/activate; \
 		pip install -r requirements.txt; \
-		ipython kernel install --user --name=pytorch-{{cookiecutter.project_name}}; \
+		ipython kernel install --user --name .venv --display-name "Pytorch {{cookiecutter.project_name}}"; \
 	)
 
 serve:

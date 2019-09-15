@@ -19,7 +19,7 @@ $ make tensorboard
 ├── app
 │   ├── __init__.py
 │   ├── architecture
-│   │   ├── __init__.py
+│   │   ├── __init__.py        -> Data initiation (Datatrain, Datatest)
 │   │   ├── NN.py              -> NN Architecture (LeNet)
 │   │   └── train.py           -> Training Mechanism
 │   ├── main.py                -> FastAPI Instance
