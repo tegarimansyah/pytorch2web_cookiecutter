@@ -22,3 +22,8 @@ We need all of these installed in system wide
 * virtualenv (`pip3 install virtualenv`)
 * Jupyter + ipython (`pip3 install jupyter ipython ipykernel`)
 
+## Usage
+
+```
+$ cookiecutter gh:tegarimansyah/pytorch2web_cookiecutter
+```
