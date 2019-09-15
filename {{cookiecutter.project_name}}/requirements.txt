@@ -5,6 +5,8 @@ fastapi==0.38.1
 h11==0.8.1
 httptools==0.0.13
 idna==2.8
+ipykernel==4.10.1
+ipython==5.8.0
 numpy==1.17.2
 Pillow==6.1.0
 pydantic==0.32.2
