@@ -13,7 +13,7 @@ $ make tensorboard
 ## Folder Structure
 
 ```
-{cookiecutter.project_name}}
+{{cookiecutter.project_name}}
 ├── Makefile
 ├── README.md
 ├── app
