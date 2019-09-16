@@ -5,9 +5,8 @@ from app.predict.service import prediction
 urls = APIRouter()
 
 @urls.post('/predict')
-async def predict_image(file: UploadFile = File(...)):
-    img_bytes = file.read()
-    class_id, class_name = prediction.predict(image_bytes=img_bytes)
+async def predict_image(file: bytes = File(...)):
+    class_id, class_name = prediction.predict(image_bytes=file)
     return {
         "status" : "success",
         "content" : {

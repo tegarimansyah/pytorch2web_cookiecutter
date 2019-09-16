@@ -4,7 +4,8 @@ import torchvision.transforms as transforms
 
 #setup training set
 #transforming the PIL Image to tensors
-batch_size = 128
+batch_size = 4
+max_epoch = 2
 
 trainset = torchvision.datasets.FashionMNIST(
     root = "./data", 

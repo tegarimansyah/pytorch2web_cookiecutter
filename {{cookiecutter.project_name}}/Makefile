@@ -8,3 +8,6 @@ install:
 
 serve:
 	uvicorn app.main:app --reload --port 8001
+
+train:
+	pytest app/architecture/train.py

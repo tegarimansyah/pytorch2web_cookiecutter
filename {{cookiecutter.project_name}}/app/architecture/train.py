@@ -1,9 +1,9 @@
 import torch
 import torchvision
+import logging
 
-from app.architecture import trainloader, testloader
+from app.architecture import trainloader, testloader, max_epoch
 from app.architecture.NN import Net
-
 
 class Train():
     def __init__(self):
@@ -16,7 +16,7 @@ class Train():
             )
         
     def run(self):
-        for epoch in range(2):  # loop over the dataset multiple times
+        for epoch in range(max_epoch):  # loop over the dataset multiple times
 
             running_loss = 0.0
             for i, data in enumerate(trainloader, 0):
@@ -35,8 +35,15 @@ class Train():
                 # print statistics
                 running_loss += loss.item()
                 if i % 2000 == 1999:    # print every 2000 mini-batches
-                    print('[%d, %5d] loss: %.3f' %
+                    logging.info('Epoch: %d, mini-batch: %d, loss: %.3f' %
                         (epoch + 1, i + 1, running_loss / 2000))
                     running_loss = 0.0
 
-        print('Finished Training')
+        torch.save(self.net.state_dict(), './data/pytorch2web_model.pt')
+        logging.info('Finished Training')
+
+
+def test_train():
+    train = Train()
+    train.run()
+    pass
