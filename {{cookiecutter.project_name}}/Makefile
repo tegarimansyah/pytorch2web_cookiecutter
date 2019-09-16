@@ -1,4 +1,7 @@
-install:
+help:            ## Show this help.
+	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
+	
+install:         ## Install virtualenv, requirements and install it on jupyter notebook
 	[ -d ".venv" ] || virtualenv .venv
 	@( \
 		. .venv/bin/activate; \
@@ -6,8 +9,11 @@ install:
 		ipython kernel install --user --name .venv --display-name "Pytorch {{cookiecutter.project_name}}"; \
 	)
 
-serve:
+serve:           ## Run web server to predict
 	uvicorn app.main:app --reload --port 8001
 
-train:
-	pytest app/architecture/train.py
+train:           ## Run training progress
+	@( \
+			. .venv/bin/activate; \
+		pytest app/architecture/train.py; \
+	)
