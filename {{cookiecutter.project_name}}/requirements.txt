@@ -5,7 +5,7 @@ Click==7.0
 decorator==4.4.0
 dnspython==1.16.0
 email-validator==1.0.4
-fastapi==0.38.1
+fastapi==0.65.2
 h11==0.8.1
 httptools==0.0.13
 idna==2.8
