@@ -11,7 +11,7 @@ httptools==0.0.13
 idna==2.8
 importlib-metadata==0.22
 ipykernel==4.10.1
-ipython==5.8.0
+ipython==7.16.3
 ipython-genutils==0.2.0
 jupyter-client==5.3.2
 jupyter-core==4.5.0
