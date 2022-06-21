@@ -16,7 +16,7 @@ ipython-genutils==0.2.0
 jupyter-client==5.3.2
 jupyter-core==4.5.0
 more-itertools==7.2.0
-numpy==1.17.2
+numpy==1.22.0
 packaging==19.1
 pexpect==4.7.0
 pickleshare==0.7.5
